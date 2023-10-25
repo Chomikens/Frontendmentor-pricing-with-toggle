@@ -1,0 +1,12 @@
+@use 'mixins' as *;
+
+.even-columns {
+	display: flex;
+	flex-direction: column;
+	@include mq(medium) {
+		flex-direction: row;
+	}
+	> * {
+		flex-basis: 100%;
+	}
+}

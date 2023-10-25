@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+	line-height: 1;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+figure {
+	margin: 0;
+}
+
+ul[class],
+ol[class] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
