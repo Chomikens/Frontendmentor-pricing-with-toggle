@@ -1,0 +1,35 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../abstracts/' as *;
+
+.pricing-section {
+	padding-block-start: 4rem;
+	@include mq('medium') {
+		padding-block-start: 4.4375rem;
+	}
+}
+
+.pricing-header {
+	max-width: 14.9375rem;
+	margin-inline: auto;
+	&__heading {
+		padding-block-end: 2.5rem;
+
+		text-align: center;
+		font-size: font(prices-heading);
+	}
+
+	&__switch-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.pricing-header__switch-container {
+	p {
+		color: rgba(map.get($colors, neutral, 400), 0.5);
+		font-weight: $font-bold;
+	}
+}
+

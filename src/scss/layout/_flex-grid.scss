@@ -1,7 +1,0 @@
-$grid-columns: 12;
-
-@for $column-counter from 1 through $grid-columns {
-	.flex-column-#{$column-counter} {
-		flex-basis: calc((100% / $grid-columns) * $column-counter);
-	}
-}

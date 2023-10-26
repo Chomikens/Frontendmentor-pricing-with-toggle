@@ -1,0 +1,50 @@
+@use '../abstracts/' as *;
+
+.switch-price-button {
+	position: absolute;
+	top: -50px;
+	left: 0;
+
+	opacity: 0;
+
+	+ label {
+		display: flex;
+
+		position: relative;
+		&:after {
+			content: '';
+			display: block;
+
+			width: 56px;
+			height: 32px;
+
+			@include gradient($gradient-first-color, $gradient-second-color);
+
+			border-radius: 100vh;
+		}
+		&::before {
+			content: '';
+
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+
+			display: block;
+
+			width: 20px;
+			height: 20px;
+
+			background-color: #fff;
+			border-radius: 50%;
+
+			animation: buttonAnimationReverse 0.5s ease-in-out forwards;
+		}
+	}
+	&:checked {
+		+ label {
+			&::before {
+				animation: buttonAnimationForward 0.5s ease-in-out forwards;
+			}
+		}
+	}
+}

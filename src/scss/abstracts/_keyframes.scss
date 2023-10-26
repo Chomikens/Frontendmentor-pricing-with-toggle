@@ -1,0 +1,25 @@
+@keyframes buttonAnimationForward {
+	0% {
+		right: 2px;
+	}
+	50% {
+		width: 40px;
+		height: 20px;
+	}
+	100% {
+		left: 2px;
+	}
+}
+
+@keyframes buttonAnimationReverse {
+	0% {
+		left: 2px;
+	}
+	50% {
+		width: 40px;
+		height: 20px;
+	}
+	100% {
+		right: 2px;
+	}
+}
