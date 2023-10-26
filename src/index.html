@@ -3,14 +3,34 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="/main.js" type="module"></script>
   <link rel="stylesheet" href="./scss/main.scss">
-  <title>Vite template</title>
+  <title>Pricing component with toggle</title>
 </head>
 
 <body>
+  <main>
+    <section class="pricing-section">
+      <div class="container">
+        <header class="pricing-header">
+          <h2 class="pricing-header__heading">Our Pricing</h2>
+          <div class="pricing-header__switch-container">
+            <p>Annualy</p>
+            <div>
+              <input type="checkbox" name="switch-price" id="switch-price">
+              <label for="switch-price"></label>
+            </div>
+            <p>Montly</p>
+          </div>
+        </header>
+
+        
+      </div>
+    </section>
+
+  </main>
 </body>
 
 </html>

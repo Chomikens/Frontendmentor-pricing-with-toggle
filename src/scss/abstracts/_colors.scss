@@ -1,12 +1,16 @@
 $colors: (
 	neutral: (
-		light: white,
-		normal: gray,
-		dark: black,
+		100: #fff,
+		200: #f7f7fe,
+		400: #6e728e,
+		500: #4a4d60,
 	),
-	primary: (
-		light: lightblue,
-		normal: blue,
-		dark: darkblue,
+	accent: (
+		purple-text: #6d72de,
+		switch-button: #a2a7f0,
+		switch-button-hover: #a2a7f0,
 	),
 );
+
+$gradient-first-color: hsl(236, 72%, 79%);
+$gradient-second-color: hsl(237, 63%, 64%);

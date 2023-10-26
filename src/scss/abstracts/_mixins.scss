@@ -21,3 +21,8 @@
 		@error 'the keyword #{$size} is not in the $breakpoints map';
 	}
 }
+
+// Mixin for gradinet
+@mixin gradient($colors1, $colors2, $deg: 135deg) {
+	background: linear-gradient($deg, $colors1, $colors2);
+}
