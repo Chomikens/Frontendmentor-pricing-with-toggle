@@ -1,42 +1,42 @@
 @use '../abstracts/' as *;
 
+// Switch
+
 .switch-price-button {
 	position: absolute;
 	top: -50px;
 	left: 0;
-
 	opacity: 0;
 
 	+ label {
 		display: flex;
-
 		position: relative;
+
 		&:after {
 			content: '';
 			display: block;
-
 			width: 56px;
 			height: 32px;
-
-			@include gradient($gradient-first-color, $gradient-second-color);
-
 			border-radius: 100vh;
+			@include gradient($gradient-first-color, $gradient-second-color);
+			transition: all 10s ease-in-out;
+		}
+
+		&:hover:after {
+			$gradient-first-color-hover: rgba($gradient-first-color, 0.5);
+			$gradient-second-color-hover: rgba($gradient-second-color, 0.5);
+			@include gradient($gradient-first-color-hover, $gradient-second-color-hover);
 		}
 		&::before {
 			content: '';
-
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
-
 			display: block;
-
 			width: 20px;
 			height: 20px;
-
 			background-color: #fff;
-			border-radius: 50%;
-
+			border-radius: 100%;
 			animation: buttonAnimationReverse 0.5s ease-in-out forwards;
 		}
 	}
@@ -45,6 +45,38 @@
 			&::before {
 				animation: buttonAnimationForward 0.5s ease-in-out forwards;
 			}
+		}
+	}
+}
+
+// Pricing buttons
+
+button {
+	padding: 0.875rem 4.125rem;
+	text-transform: uppercase;
+	border-radius: 0.375rem;
+	font-weight: $font-bold;
+	font-size: 0.8125rem;
+	color: colors(neutral, 100);
+	@include gradient($gradient-first-color, $gradient-second-color);
+	cursor: pointer;
+	transition: all 0.4s ease-in-out;
+
+	&:hover,
+	&:focus {
+		background: colors(neutral, 100);
+		color: colors(accent, purple-text);
+		border: 1px solid colors(accent, purple-text);
+	}
+
+	.pricing-box__prosessional & {
+		background: colors(neutral, 100);
+		color: colors(accent, purple-text);
+		&:hover,
+		&:focus {
+			background: transparent;
+			color: colors(neutral, 100);
+			border: 1px solid;
 		}
 	}
 }

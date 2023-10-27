@@ -3,9 +3,41 @@
 @use '../abstracts/' as *;
 
 .pricing-section {
+	position: relative;
+	min-height: 100vh;
 	padding-block-start: 4rem;
+	overflow: hidden;
 	@include mq('medium') {
 		padding-block-start: 4.4375rem;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translateY(-10%);
+		height: 757.201px;
+		width: 100%;
+		background-image: url('../../images/bg-top.svg');
+		background-position: right;
+		background-repeat: no-repeat;
+
+		z-index: -1;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translateY(40%);
+		height: 650px;
+		width: 100%;
+		background-image: url('../../images/bg-bottom.svg');
+		background-position: bottom left;
+		background-repeat: no-repeat;
+
+		z-index: -1;
 	}
 }
 
@@ -33,3 +65,76 @@
 	}
 }
 
+// Boxes
+
+.pricing-box {
+	padding-block-start: 5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	row-gap: 2rem;
+	@include mq('small') {
+		flex-direction: row;
+		padding-block-start: 4.03125rem;
+	}
+
+	.pricing-header {
+		font-size: 1.125 rem;
+		font-weight: $font-bold;
+	}
+
+	article {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		width: 100%;
+		max-width: 327px;
+		padding-inline: 2rem;
+		border-radius: 0.625rem;
+		@include mq('small') {
+			max-width: 350px;
+		}
+	}
+
+	article:not(.pricing-box__prosessional) {
+		background-color: colors(neutral, 100);
+		min-height: 450px;
+	}
+
+	&__prosessional {
+		min-height: 500px;
+		color: colors(neutral, 100);
+		@include gradient($gradient-first-color, $gradient-second-color);
+	}
+
+	&__pricing-list {
+		li {
+			padding-block-start: 1rem;
+			text-align: center;
+			column-gap: 0.5rem;
+			&:first-of-type {
+				display: flex;
+				align-items: center;
+				font-size: font(prices-values);
+				font-weight: $font-bold;
+			}
+
+			&:nth-of-type(n + 2) {
+				border-block-start: 1px solid var(--before-colore, #6e728e);
+			}
+
+			&:last-of-type {
+				border-block-end: 1px solid var(--before-colore, #6e728e);
+				padding-bottom: 0.5rem;
+			}
+			span {
+				&:first-of-type {
+					font-size: 2.5rem;
+				}
+			}
+		}
+	}
+}

@@ -1,6 +1,7 @@
 @keyframes buttonAnimationForward {
 	0% {
 		right: 2px;
+		border-radius: 100% 49% 100% 100%;
 	}
 	50% {
 		width: 40px;
@@ -14,6 +15,7 @@
 @keyframes buttonAnimationReverse {
 	0% {
 		left: 2px;
+		border-radius: 100% 100% 100% 49%;
 	}
 	50% {
 		width: 40px;

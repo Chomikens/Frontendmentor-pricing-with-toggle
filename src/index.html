@@ -19,14 +19,47 @@
           <div class="pricing-header__switch-container">
             <p>Annualy</p>
             <div>
-              <input type="checkbox" name="switch-price" id="switch-price" class="switch-price-button">
+              <input type="checkbox" name="switch-price" id="switch-price" class="switch-price-button"
+                aria-checked="false" aria-label="Swtich from montly to annualy">
               <label for="switch-price"></label>
             </div>
             <p>Montly</p>
           </div>
         </header>
 
-        
+        <div class="pricing-box">
+          <article class="pricing-box__basic">
+            <header class="pricing-header">Basic</header>
+            <ul class="pricing-box__pricing-list flow">
+              <li><span>$</span>19.99</li>
+              <li>500 GB Storage</li>
+              <li>2 Users Allowed</li>
+              <li>Send up to 3 GB</li>
+            </ul>
+            <button>Learn more</button>
+          </article>
+          <article class="pricing-box__prosessional">
+            <header class="pricing-header">Professional</header>
+            <ul class="pricing-box__pricing-list flow" style="--before-colore:#fff;">
+              <li><span>$</span>24.99</li>
+              <li>1 TB Storage</li>
+              <li>5 Users Allowed</li>
+              <li>Send up to 10 GB</li>
+            </ul>
+            <button>Learn more</button>
+          </article>
+          <article class="pricing-box__master">
+            <header class="pricing-header">Master</header>
+            <ul class="pricing-box__pricing-list flow">
+              <li><span>$</span>39.99</li>
+              <li>2 TB Storage </li>
+              <li>10 Users Allowed</li>
+              <li>Send up to 20 GB</li>
+            </ul>
+            <button>Learn more</button>
+          </article>
+        </div>
+
       </div>
     </section>
 
